@@ -19,7 +19,7 @@ const App: React.FC = () => {
   const [todos, setTodos] = React.useState(initialTodos);
 
   // function
-  const toggleTodo = (selectedTodo: Todo) => {
+  const toggleTodo = (selectedTodo: Todo):void => {
     const newTodos = todos.map(todo => {
       if (todo === selectedTodo) {
         return {
@@ -33,7 +33,7 @@ const App: React.FC = () => {
     setTodos(newTodos);
   };
   
-  const addTodo: AddTodo = (text: string) => {
+  const addTodo: AddTodo = (text: string):void => {
     const newTodo = { text, complete: false };
     setTodos([...todos, newTodo]);
   };

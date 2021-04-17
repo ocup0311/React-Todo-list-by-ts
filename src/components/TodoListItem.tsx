@@ -8,7 +8,7 @@ interface Props {
 const AddTodoForm: React.FC<Props> = ({ todo, toggleTodo }) => {
 
 // function
-const onClick = () => { toggleTodo(todo); }
+const onClick = ():void => { toggleTodo(todo); }
 
 // use readOnly for checkbox to controll from state
 // or use onChange to get event to set out state
