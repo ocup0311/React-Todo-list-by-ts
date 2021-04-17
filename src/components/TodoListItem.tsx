@@ -10,6 +10,8 @@ const AddTodoForm: React.FC<Props> = ({ todo, toggleTodo }) => {
 // function
 const onClick = () => { toggleTodo(todo); }
 
+// use readOnly for checkbox to controll from state
+// or use onChange to get event to set out state
 return ( 
   <li>
     <label
@@ -18,7 +20,9 @@ return (
       <input 
         type="checkbox"
         checked={todo.complete}
-        onClick={onClick}/> 
+        onClick={onClick}
+        readOnly
+        /> 
       {todo.text}
     </label>
   </li>
