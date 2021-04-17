@@ -9,11 +9,11 @@ const AddTodoForm: React.FC<Props> = ({ addTodo }) => {
   const [text, setText] = React.useState('');
 
   // function
-  const onChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e:React.ChangeEvent<HTMLInputElement>):void => {
     setText(e.target.value)
    }
 
-  const onClick = (e:React.FormEvent<HTMLButtonElement>) => {
+  const onClick = (e:React.FormEvent<HTMLButtonElement>):void => {
     e.preventDefault();
     addTodo(text);
     setText('');
