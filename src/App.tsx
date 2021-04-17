@@ -1,5 +1,7 @@
 import React from 'react';
-import TodoListItem from './components/TodoListItem';
+import TodoList from './components/TodoList';
+import AddTodoForm from './components/AddTodoForm';
+
 
 const initialTodos: Todo[] = [
   {
@@ -31,10 +33,18 @@ const App: React.FC = () => {
     setTodos(newTodos);
   };
   
+  const addTodo: AddTodo = (text: string) => {
+    const newTodo = { text, complete: false };
+    setTodos([...todos, newTodo]);
+  };
+
   return (
   <>
-    <TodoListItem todo={todos[0]} toggleTodo={toggleTodo}/>
-    <TodoListItem todo={todos[1]} toggleTodo={toggleTodo}/>
+    <TodoList 
+      todos={todos}
+      toggleTodo={toggleTodo}
+    />
+    <AddTodoForm addTodo={addTodo} />
   </>
   );
 }

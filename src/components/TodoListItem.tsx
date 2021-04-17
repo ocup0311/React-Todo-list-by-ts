@@ -5,9 +5,9 @@ interface Props {
   toggleTodo: ToggleTodo;
 }
 
-const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
+const AddTodoForm: React.FC<Props> = ({ todo, toggleTodo }) => {
 
-  // function
+// function
 const onClick = () => { toggleTodo(todo); }
 
 return ( 
@@ -25,9 +25,9 @@ return (
   );
 };
 
-export default TodoListItem;
+export default AddTodoForm;
 
-
+// styles
 const styles={
   complete:{textDecoration: 'line-through'},
 
